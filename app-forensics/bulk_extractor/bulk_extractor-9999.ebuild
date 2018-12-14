@@ -12,7 +12,7 @@ HOMEPAGE="http://www.forensicswiki.org/wiki/Bulk_extractor"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="exiv2 +ewf aff sqlite"
 
 DEPEND="aff? ( app-forensics/afflib dev-libs/openssl:* )
