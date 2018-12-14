@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jan.breig@freenet.de</email>
+		<name>Jan Breig</name>
+	</maintainer>
+	<use>
+		<flag name="ewf">Uses <pkg>app-forensics/libewf</pkg></flag>
+		<flag name="aff">Uses <pkg>app-forensics/afflib</pkg></flag>
+		<flag name="exiv2">Uses <pkg>media-gfx/exiv2</pkg></flag>
+	</use>
+</pkgmetadata>
