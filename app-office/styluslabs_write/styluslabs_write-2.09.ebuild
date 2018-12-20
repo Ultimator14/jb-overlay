@@ -30,5 +30,5 @@ src_compile() {
 src_install() {
 	exeinto /opt/${PN}
 	doexe Write
-	make_desktop_entry /opt/${PN}/Write Write pencil Office
+	make_desktop_entry "/opt/${PN}/Write %U" Write pencil Office
 }
