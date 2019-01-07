@@ -12,3 +12,7 @@
 -gnome-extra/gnome-shell-extension-gsconnect
 -gnome-extra/gnome-tweak-tool
 -gnome-extra/office-runner
+
+
+# reactivate entry disabled by selinux
+-app-eselect/eselect-gnome-shell-extensions
