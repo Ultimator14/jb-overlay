@@ -5,7 +5,7 @@ EAPI=7
 
 DESCRIPTION="The plugin manager for zsh."
 HOMEPAGE="http://antigen.sharats.me/"
-SRC_URI="https://github.com/zsh-users/${PN}/releases/download/v${PV}/v${PV}.tar.gz"
+SRC_URI="https://github.com/zsh-users/${PN}/archive/v${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
