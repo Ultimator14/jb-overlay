@@ -7,7 +7,7 @@ inherit autotools
 
 DESCRIPTION="Library and tools to access FileVault Drive Encryption (FVDE) encrypted volumes"
 HOMEPAGE="https://github.com/libyal/libfvde"
-SRC_URI="https://github.com/libyal/${PN}/releases/download/${PV}/${PN}-experimental-${PV}.tar.gz"
+SRC_URI="https://github.com/libyal/${PN}/archive/${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
