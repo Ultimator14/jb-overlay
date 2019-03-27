@@ -14,7 +14,7 @@ LICENSE="gitkraken-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-# use ~/.local/tmp as TMPDIR, this programm needs exec permission on it's TMPDIR and this option allows it to keep /tmp noexec
+# use $HOME/.local/tmp as TMPDIR, this programm needs exec permission on it's TMPDIR and this option allows it to keep /tmp noexec
 IUSE="+localtmp"
 
 DEPEND="net-misc/curl
@@ -35,7 +35,7 @@ src_install() {
 
 	if use localtmp ; then
 		# use local tmpdir
-		make_wrapper "${PN}" "env TMPDIR=\"~/.local/tmp\" /opt/${PN}/${PN}"
+		make_wrapper "${PN}" "env TMPDIR=\"\$HOME/.local/tmp\" /opt/${PN}/${PN}"
 	else
 		# don't change tmpdir
 		make_wrapper "${PN}" "/opt/${PN}/${PN}"
