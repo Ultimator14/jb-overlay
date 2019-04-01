@@ -5,4 +5,7 @@
 		<email>jan.breig@freenet.de</email>
 		<name>Jan Breig</name>
 	</maintainer>
+	<use>
+		<flag name="bundled-jre">Uses bundled jre</flag>
+	</use>
 </pkgmetadata>
