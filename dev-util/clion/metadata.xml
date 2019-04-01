@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jan.breig@freenet.de</email>
+		<name>Jan Breig</name>
+	</maintainer>
+	<use>
+		<flag name="bundled-jre">Uses bundled jre</flag>
+		<flag name="system-lldb">Includes dev-util/lldb dependency</flag>
+		<flag name="python">Includes python plugins</flag>
+		<flag name="bundled-cmake">Uses bundled cmake</flag>
+		<flag name="bundled-gdb">Uses bundled gdb</flag>
+		<flag name="bundled-lldb">Uses bundled lldb</flag>
+	</use>
+</pkgmetadata>
