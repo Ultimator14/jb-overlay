@@ -78,5 +78,5 @@ jetbrains_src_install() {
 
 	make_wrapper "${PN}" "/opt/${PN}/bin/${JB_MAJOR_PN}.sh"
 	newicon "bin/${JB_MAJOR_PN}.svg" "${PN}.svg"
-	make_desktop_entry "${PN}" "${JB_PRETTY_PN}" "${PN}" "Development;IDE;"
+	make_desktop_entry "${PN} %f" "${JB_PRETTY_PN}" "${PN}" "Development;IDE;"
 }
