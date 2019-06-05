@@ -19,7 +19,7 @@ inherit desktop eutils
 HOMEPAGE="http://www.jetbrains.com/${JB_HOMEPAGE}"
 SRC_URI="http://download.jetbrains.com/${JB_SRC_URI}.tar.gz"
 
-SLOT=$(ver_cut 1)
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="bundled-jre"
 RESTRICT="mirror"
