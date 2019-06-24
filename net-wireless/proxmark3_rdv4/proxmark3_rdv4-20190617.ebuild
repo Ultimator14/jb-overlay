@@ -13,12 +13,16 @@ HOMEPAGE="https://github.com/RfidResearchGroup/proxmark3"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="firmware"
+IUSE="wayland firmware"
 
 DEPEND="virtual/libusb:=
 	sys-libs/ncurses:*[tinfo]
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
 	sys-libs/readline:=
 	sys-apps/pcsc-lite
+	wayland? ( dev-qt/qtwayland:5 )
 	firmware? ( sys-devel/gcc-arm-none-eabi )"
 RDEPEND="${DEPEND}"
 
