@@ -33,9 +33,9 @@ DEPEND="virtual/libusb:=
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i -e 's/FULLIMAGE="fullimage.elf"/FULLIMAGE="\/usr\/share\/proxmark3_rdv4\/firmware\/fullimage.elf"/g' pm3 || die
-	sed -i -e 's/BOOTIMAGE="bootrom.elf"/BOOTIMAGE="\/usr\/share\/proxmark3_rdv4\/firmware\/bootrom.elf"/g' pm3 || die
-	sed -i -e 's/proxmark3/proxmark3_rdv4/g' include/common.h || die
+	sed -i -e 's#FULLIMAGE="fullimage.elf"#FULLIMAGE="'${EPREFIX}'/usr/share/proxmark3_rdv4/firmware/fullimage.elf"#g' pm3 || die
+	sed -i -e 's#BOOTIMAGE="bootrom.elf"#BOOTIMAGE="'${EPREFIX}'/usr/share/proxmark3_rdv4/firmware/bootrom.elf"#g' pm3 || die
+	sed -i -e 's#proxmark3#proxmark3_rdv4#g' include/common.h || die
 	mv driver/77-pm3-usb-device-blacklist.rules driver/77-pm3_rdv4-usb-device-blacklist.rules
 	eapply_user
 }
@@ -45,6 +45,7 @@ src_compile(){
 		emake all
 	else
 		emake client
+		emake mfkey
 	fi
 }
 
