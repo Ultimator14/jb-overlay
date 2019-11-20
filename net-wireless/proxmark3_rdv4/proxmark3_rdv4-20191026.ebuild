@@ -4,7 +4,7 @@
 EAPI=7
 
 EGIT_REPO_URI="https://github.com/RfidResearchGroup/proxmark3.git"
-EGIT_COMMIT="23b6756ac70bef8e82e50bd5751e150e1487dfdf"
+EGIT_COMMIT="900184b600629f0edd528bd8ba77cb06794eb91a"
 inherit git-r3 udev
 
 DESCRIPTION="Proxmark3 RDV4.0 based on iceman fork"
