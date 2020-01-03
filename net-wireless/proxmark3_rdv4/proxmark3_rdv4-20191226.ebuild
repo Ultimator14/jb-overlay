@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -23,6 +23,7 @@ DEPEND="virtual/libusb:=
 	sys-libs/ncurses:*[tinfo]
 	sys-libs/readline:=
 	sys-apps/pcsc-lite
+	media-libs/libsndfile
 	firmware? ( sys-devel/gcc-arm-none-eabi )
 	qt5? (
 		dev-qt/qtcore:5
