@@ -26,7 +26,7 @@ S=${WORKDIR}
 src_install() {
 	cp "${DISTDIR}/idafree70_linux.run" ./
 	chmod +x idafree70_linux.run
-	./idafree70_linux.run --mode unattended --prefix "${WORKDIR}/opt/idafree70"
+	./idafree70_linux.run --installpassword "" --mode unattended --prefix "${WORKDIR}/opt/idafree70"
 
 	insinto /
 	doins -r opt
