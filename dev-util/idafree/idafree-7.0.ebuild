@@ -33,5 +33,5 @@ src_install() {
 
 	exeinto /opt/idafree70
 	doexe opt/idafree70/ida64
-	dosym opt/idafree70/ida64 /usr/bin/ida64
+	dosym /opt/idafree70/ida64 /usr/bin/ida64
 }
