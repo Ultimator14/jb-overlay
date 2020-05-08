@@ -16,13 +16,3 @@ DESCRIPTION="Capable and Ergonomic IDE for JVM"
 LICENSE="jetbrains-business jetbrains-personal"
 
 RDEPEND="virtual/jdk"
-
-src_prepare() {
-	jetbrains_src_prepare
-
-	rm -rf plugins/tfsIntegration/lib/native/{aix,freebsd,hpux,macosx,solaris,win32}
-	use_rm !arm plugins/tfsIntegration/lib/native/linux/arm
-	use_rm !amd64 plugins/tfsIntegration/lib/native/linux/x86_64
-	use_rm !ppc plugins/tfsIntegration/lib/native/linux/ppc
-	use_rm !x86 plugins/tfsIntegration/lib/native/linux/x86
-}
