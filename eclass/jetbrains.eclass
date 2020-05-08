@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: jetbrains.eclass
@@ -24,7 +24,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="bundled-jre"
 RESTRICT="mirror"
 
-RDEPEND="!bundled-jre? ( >=virtual/jre-1.8 )"
+RDEPEND="!bundled-jre? ( >=virtual/jre-1.8 )
+dev-libs/libdbusmenu"
 
 S="${WORKDIR}/${JB_EXTRACTED}"
 
@@ -48,7 +49,9 @@ QA_PREBUILT="opt/${PN}/*"
 use_rm() {
 	[[ -z "${1}" || -z "${2}" ]] && die "use_rm: Invalid argument, usage: use_rm <userlag> <path to delete>"
 	if use "${1}"; then
-		rm -rf ${2} || die
+		# suppress prompt with --interactive=never flag rather than with -f
+		# because -f does not throw error if file doesn't exist
+		rm -r --interactive=never ${2} || die
 	fi
 }
 
@@ -60,8 +63,10 @@ EXPORT_FUNCTIONS src_prepare src_install
 jetbrains_src_prepare() {
 	default
 
-	use_rm !bundled-jre jre64
-	use_rm !arm bin/fsnotifier-arm
+	use_rm !bundled-jre jbr
+
+	# prevent soname error of wrong architecture
+	rm -r --interactive=never lib/pty4j-native/linux/ppc64le
 }
 
 # @FUNCTION: jetbrains_src_install
@@ -73,7 +78,7 @@ jetbrains_src_install() {
 	fperms 755 /opt/${PN}/bin/{${JB_MAJOR_PN}.sh,fsnotifier{,64}}
 
 	if use bundled-jre; then
-		fperms 755 /opt/${PN}/jre64/bin/{java,jjs,keytool,orbd,pack200,policytool,rmid,rmiregistry,servertool,tnameserv,unpack200}
+		fperms 755 /opt/${PN}/jbr/bin/*
 	fi
 
 	make_wrapper "${PN}" "/opt/${PN}/bin/${JB_MAJOR_PN}.sh"
