@@ -16,8 +16,8 @@ esac
 
 inherit desktop eutils
 
-HOMEPAGE="http://www.jetbrains.com/${JB_HOMEPAGE}"
-SRC_URI="http://download.jetbrains.com/${JB_SRC_URI}.tar.gz"
+HOMEPAGE="https://www.jetbrains.com/${JB_HOMEPAGE}"
+SRC_URI="https://download.jetbrains.com/${JB_SRC_URI}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
