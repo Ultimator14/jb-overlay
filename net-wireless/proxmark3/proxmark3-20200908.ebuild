@@ -105,7 +105,6 @@ src_compile(){
 		emake mfkey
 		emake nonce2key
 		emake mf_nonce_brute
-		emake hitag2crack
 		emake fpga_compress
 	fi
 }
@@ -113,14 +112,13 @@ src_compile(){
 src_install() {
 	export PREFIX="/usr"
 	export DESTDIR="${ED}"
-	export MYDESTDIR="${ED}"  # required for hitag2crack tool
 	export UDEV_PREFIX="$(get_udevdir)/rules.d"
 	export INSTALLDOCSRELPATH="/share/doc/${PF}"
 
 	if use firmware; then
 		emake ${SKIP_OPTS} install
 	else
-		emake ${SKIP_OPTS} client/install mfkey/install nonce2key/install mf_nonce_brute/install hitag2crack/install fpga_compress/install
+		emake ${SKIP_OPTS} client/install mfkey/install nonce2key/install mf_nonce_brute/install fpga_compress/install
 	fi
 }
 
