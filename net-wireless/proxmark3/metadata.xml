@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jan.breig@freenet.de</email>
+		<name>Jan Breig</name>
+	</maintainer>
+	<use>
+		<flag name="bluez">Add support for BlueShark Standalone Module</flag>
+		<flag name="firmware">Install proxmark firmware files</flag>
+		<flag name="qt5">Add support for showing graphs using Qt</flag>
+		<flag name="wayland">Add Qt wayland support</flag>
+		<flag name="standalone-lf-em4100emul">LF EM4100 simulator standalone mode - temskiy</flag>
+		<flag name="standalone-lf-em4100rswb">LF EM4100 read/write/clone/brute mode - Monster1024</flag>
+		<flag name="standalone-lf-em4100rwc">LF EM4100 read/write/clone mode - temskiy</flag>
+		<flag name="standalone-lf-hidbrute">HID corporate 1000 bruteforce - Federico dotta and Maurizio Agazzini</flag>
+		<flag name="standalone-lf-icehid">LF HID collector to flashmem - Iceman1001</flag>
+		<flag name="standalone-lf-proxbrute">HID ProxII bruteforce - Brad Antoniewicz</flag>
+		<flag name="standalone-lf-samyrun">HID26 read/clone/sim - Samy Kamkar</flag>
+		<flag name="standalone-lf-skeleton">standalone mode skeleton - Iceman1001</flag>
+		<flag name="standalone-hf-14asniff">14a sniff storing to flashmem - Micolous</flag>
+		<flag name="standalone-hf-aveful">MIFARE Ultralight read/simulation - Ave Ozkal</flag>
+		<flag name="standalone-hf-bog">14a sniff with ULC/ULEV1/NTAG auth storing in flashmem - Bogito</flag>
+		<flag name="standalone-hf-colin">Mifare ultra fast sniff/sim/clone - Colin Brigato</flag>
+		<flag name="standalone-hf-iceclass">iCLASS 4-1 mode sim/read and dump/loclass/glitch and config to flashmem - Iceman1001</flag>
+		<flag name="standalone-hf-legic">HF Legic Prime standalone - uhei</flag>
+		<flag name="standalone-hf-mattyrun">Mifare sniff/clone - Matías A. Ré Medina</flag>
+		<flag name="standalone-hf-msdsal">EMV Read and emulation - Salvador Mendoza</flag>
+		<flag name="standalone-hf-young">Mifare sniff/simulation - Craig Young</flag>
+	</use>
+</pkgmetadata>
