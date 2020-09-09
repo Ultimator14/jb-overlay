@@ -48,44 +48,43 @@ src_prepare() {
 	fi
 
 	# Set standalone mode
-    if use standalone-lf-em4100emul; then
-        echo 'STANDALONE=LF_EM4100EMUL' >> Makefile.platform
-    elif use standalone-lf-em4100rswb; then
-        echo 'STANDALONE=LF_EM4100RSWB' >> Makefile.platform
-    elif use standalone-lf-em4100rwc; then
-        echo 'STANDALONE=LF_EM4100RWC' >> Makefile.platform
-    elif use standalone-lf-hidbrute; then
-        echo 'STANDALONE=LF_HIDBRUTE' >> Makefile.platform
-    elif use standalone-lf-icehid; then
-        echo 'STANDALONE=LF_ICEHID' >> Makefile.platform
-    elif use standalone-lf-proxbrute; then
-        echo 'STANDALONE=LF_PROXBRUTE' >> Makefile.platform
-    elif use standalone-lf-samyrun; then
-        echo 'STANDALONE=LF_SAMYRUN' >> Makefile.platform
+	if use standalone-lf-em4100emul; then
+		echo 'STANDALONE=LF_EM4100EMUL' >> Makefile.platform
+	elif use standalone-lf-em4100rswb; then
+		echo 'STANDALONE=LF_EM4100RSWB' >> Makefile.platform
+	elif use standalone-lf-em4100rwc; then
+		echo 'STANDALONE=LF_EM4100RWC' >> Makefile.platform
+	elif use standalone-lf-hidbrute; then
+		echo 'STANDALONE=LF_HIDBRUTE' >> Makefile.platform
+	elif use standalone-lf-icehid; then
+		echo 'STANDALONE=LF_ICEHID' >> Makefile.platform
+	elif use standalone-lf-proxbrute; then
+		echo 'STANDALONE=LF_PROXBRUTE' >> Makefile.platform
+	elif use standalone-lf-samyrun; then
+		echo 'STANDALONE=LF_SAMYRUN' >> Makefile.platform
 	elif use standalone-lf-skeleton; then
-        echo 'STANDALONE=LF_SKELETON' >> Makefile.platform
-
-    elif use standalone-hf-14asniff; then
-        echo 'STANDALONE=HF_14ASNIFF' >> Makefile.platform
-    elif use standalone-hf-aveful; then
-        echo 'STANDALONE=HF_AVEFUL' >> Makefile.platform
-    elif use standalone-hf-bog; then
-        echo 'STANDALONE=HF_BOG' >> Makefile.platform
-    elif use standalone-hf-colin; then
-        echo 'STANDALONE=HF_COLIN' >> Makefile.platform
-    elif use standalone-hf-iceclass; then
-        echo 'STANDALONE=HF_ICECLASS' >> Makefile.platform
-    elif use standalone-hf-legic; then
-        echo 'STANDALONE=HF_LEGIC' >> Makefile.platform
-    elif use standalone-hf-mattyrun; then
-        echo 'STANDALONE=HF_MATTYRUN' >> Makefile.platform
-    elif use standalone-hf-msdsal; then
-        echo 'STANDALONE=HF_MSDSAL' >> Makefile.platform
-    elif use standalone-hf-young; then
-        echo 'STANDALONE=HF_YOUNG' >> Makefile.platform
-    else
-        echo 'STANDALONE=' >> Makefile.platform
-    fi
+		echo 'STANDALONE=LF_SKELETON' >> Makefile.platform
+	elif use standalone-hf-14asniff; then
+		echo 'STANDALONE=HF_14ASNIFF' >> Makefile.platform
+	elif use standalone-hf-aveful; then
+		echo 'STANDALONE=HF_AVEFUL' >> Makefile.platform
+	elif use standalone-hf-bog; then
+		echo 'STANDALONE=HF_BOG' >> Makefile.platform
+	elif use standalone-hf-colin; then
+		echo 'STANDALONE=HF_COLIN' >> Makefile.platform
+	elif use standalone-hf-iceclass; then
+		echo 'STANDALONE=HF_ICECLASS' >> Makefile.platform
+	elif use standalone-hf-legic; then
+		echo 'STANDALONE=HF_LEGIC' >> Makefile.platform
+	elif use standalone-hf-mattyrun; then
+		echo 'STANDALONE=HF_MATTYRUN' >> Makefile.platform
+	elif use standalone-hf-msdsal; then
+		echo 'STANDALONE=HF_MSDSAL' >> Makefile.platform
+	elif use standalone-hf-young; then
+		echo 'STANDALONE=HF_YOUNG' >> Makefile.platform
+	else
+		echo 'STANDALONE=' >> Makefile.platform
+	fi
 
 	eapply_user
 
