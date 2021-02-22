@@ -1,0 +1,8 @@
+# reactivate gnome entries due to dantrells profile
+gnome-base/gdm -wayland
+>=x11-wm/mutter-3.22 -wayland
+x11-misc/xscreensaver -gdm
+x11-misc/gpaste -gnome
+x11-terms/gnome-terminal -gnome-shell
+x11-themes/arc-theme -gnome-shell
+x11-themes/zukitwo -gnome-shell

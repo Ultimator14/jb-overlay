@@ -1,0 +1,3 @@
+gentoo:default/linux/amd64/17.1/desktop/gnome
+gentoo:features/hardened/amd64
+gentoo:features/selinux
