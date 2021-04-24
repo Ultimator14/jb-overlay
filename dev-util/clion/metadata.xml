@@ -7,8 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="bundled-jre">Uses bundled jre</flag>
-		<flag name="system-lldb">Includes dev-util/lldb dependency</flag>
-		<flag name="python">Includes python plugins</flag>
+		<flag name="bundled-clang">Uses bundled clang</flag>
 		<flag name="bundled-cmake">Uses bundled cmake</flag>
 		<flag name="bundled-gdb">Uses bundled gdb</flag>
 		<flag name="bundled-lldb">Uses bundled lldb</flag>
