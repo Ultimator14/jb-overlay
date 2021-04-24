@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: jetbrains.eclass
@@ -7,7 +7,7 @@
 # @BLURB: Eclass that bundles jetbrains applications
 
 case "${EAPI:-0}" in
-    5|6|7)
+    6|7)
         ;;
     *)
         die "${ECLASS}: Unsupported eapi (EAPI=${EAPI})"
@@ -20,7 +20,7 @@ HOMEPAGE="https://www.jetbrains.com/${JB_HOMEPAGE}"
 SRC_URI="https://download.jetbrains.com/${JB_SRC_URI}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="bundled-jre"
 RESTRICT="mirror"
 
@@ -41,17 +41,32 @@ fi
 
 # Deactivate QA because most files are pre-stripped
 QA_PREBUILT="opt/${PN}/*"
+QA_PRESTRIPPED="opt/${PN}/*"
 
 # @FUNCTION: use_rm
 # @USAGE: use_rm(<useflag>, <path to delete>)
 # @DESCRIPTION:
 # Check if the given use flag is set and if so, delete the given file or directory.
 use_rm() {
-	[[ -z "${1}" || -z "${2}" ]] && die "use_rm: Invalid argument, usage: use_rm <userlag> <path to delete>"
+	[[ -z "${1}" || -z "${2}" ]] && die "use_rm: Invalid argument, usage: use_rm <useflag> <path to delete>"
 	if use "${1}"; then
 		# suppress prompt with --interactive=never flag rather than with -f
 		# because -f does not throw error if file doesn't exist
 		rm -r --interactive=never ${2} || die
+	fi
+}
+
+# @FUNCTION: use_mkexec
+# @USAGE: use_mkexec(<useflag>, <path to make executable>)
+# @DESCRIPTION:
+# Check if the given use flag is set and if so, make the given files or directories executable
+use_mkexec() {
+	[[ -z "${1}" || -z "${2}" ]] && die "use_mkexec: Invalid argument, usage: use_mkexec <useflag> <path to make executable>"
+	if use "${1}"; then
+		for p in ${@:2}
+		do
+			fperms 755 /opt/${PN}/${p} || die
+		done
 	fi
 }
 
@@ -66,6 +81,8 @@ jetbrains_src_prepare() {
 	use_rm !bundled-jre jbr
 
 	# prevent soname error of wrong architecture
+	rm -r --interactive=never lib/pty4j-native/linux/aarch64
+	rm -r --interactive=never lib/pty4j-native/linux/mips64el
 	rm -r --interactive=never lib/pty4j-native/linux/ppc64le
 }
 
