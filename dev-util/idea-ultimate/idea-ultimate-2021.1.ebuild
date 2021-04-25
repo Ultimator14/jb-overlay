@@ -7,7 +7,7 @@ JB_MAJOR_PN="idea"
 JB_PRETTY_PN="Intellij IDEA Ultimate"
 JB_HOMEPAGE="${JB_MAJOR_PN}"
 JB_SRC_URI="${JB_MAJOR_PN}/${JB_MAJOR_PN}IU-${PV}"
-JB_EXTRACTED="${JB_MAJOR_PN}-IU-203.7148.57"
+JB_EXTRACTED="${JB_MAJOR_PN}-IU-211.6693.111"
 
 inherit jetbrains
 
@@ -16,3 +16,13 @@ DESCRIPTION="Capable and Ergonomic IDE for JVM"
 LICENSE="jetbrains-business jetbrains-personal"
 
 RDEPEND="virtual/jdk"
+
+src_prepare() {
+	jetbrains_src_prepare
+
+	rm --interactive=never plugins/Kotlin/bin/linux/LLDBFrontend || die
+	rm --interactive=never plugins/maven/lib/maven3/lib/jansi-native/freebsd32/libjansi.so || die
+	rm --interactive=never plugins/maven/lib/maven3/lib/jansi-native/freebsd64/libjansi.so || die
+
+}
+
