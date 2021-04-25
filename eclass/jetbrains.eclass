@@ -41,7 +41,6 @@ fi
 
 # Deactivate QA because most files are pre-stripped
 QA_PREBUILT="opt/${PN}/*"
-QA_PRESTRIPPED="opt/${PN}/*"
 
 # @FUNCTION: use_rm
 # @USAGE: use_rm(<useflag>, <path to delete>)
@@ -81,9 +80,9 @@ jetbrains_src_prepare() {
 	use_rm !bundled-jre jbr
 
 	# prevent soname error of wrong architecture
-	rm -r --interactive=never lib/pty4j-native/linux/aarch64
-	rm -r --interactive=never lib/pty4j-native/linux/mips64el
-	rm -r --interactive=never lib/pty4j-native/linux/ppc64le
+	rm -r --interactive=never lib/pty4j-native/linux/aarch64 || die
+	rm -r --interactive=never lib/pty4j-native/linux/mips64el || die
+	rm -r --interactive=never lib/pty4j-native/linux/ppc64le || die
 }
 
 # @FUNCTION: jetbrains_src_install
@@ -92,11 +91,9 @@ jetbrains_src_prepare() {
 jetbrains_src_install() {
 	insinto "/opt/${PN}"
 	doins -r .
-	fperms 755 /opt/${PN}/bin/{${JB_MAJOR_PN}.sh,fsnotifier{,64}}
+	fperms 755 /opt/${PN}/bin/{${JB_MAJOR_PN}.sh,fsnotifier{,64}} || die
 
-	if use bundled-jre; then
-		fperms 755 /opt/${PN}/jbr/bin/*
-	fi
+	use_mkexec bundled-jre jbr/bin/{jaotc,java,javac,jcmd,jdb,jfr,jhsdb,jinfo,jjs,jmap,jps,jrunscript,jstack,jstat,keytool,pack200,rmid,rmiregistry,serialver,unpack200}
 
 	make_wrapper "${PN}" "/opt/${PN}/bin/${JB_MAJOR_PN}.sh"
 	newicon "bin/${JB_MAJOR_PN}.svg" "${PN}.svg"
