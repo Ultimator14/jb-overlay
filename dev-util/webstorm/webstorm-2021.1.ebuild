@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -6,7 +6,7 @@ EAPI=7
 JB_PRETTY_PN="WebStorm"
 JB_HOMEPAGE="${PN}"
 JB_SRC_URI="${PN}/WebStorm-${PV}"
-JB_EXTRACTED="WebStorm-202.7660.23"
+JB_EXTRACTED="WebStorm-211.6693.108"
 
 inherit jetbrains
 
