@@ -1,0 +1,12 @@
+diff --git a/src/Makefile b/src/Makefile
+index 16f9a72..c5c8976 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -152,7 +152,7 @@ install: installdirs
+ 	for prog in $(PROGS); do \
+ 		$(INSTALL_PROGRAM) $(INSTALL_FLAGS) $(pev_BUILDDIR)/$$prog $(DESTDIR)$(bindir); \
+ 		$(CHK_FILE_EXISTS) $(MANDIR)/$$prog$(man1ext) && \
+-			gzip -c -9 $(MANDIR)/$$prog$(man1ext) > $(DESTDIR)$(man1dir)/$$prog$(man1ext).gz || \
++			cp $(MANDIR)/$$prog$(man1ext) $(DESTDIR)$(man1dir)/$$prog$(man1ext) || \
+ 			echo -n; \
+ 	done
