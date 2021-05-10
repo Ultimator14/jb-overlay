@@ -27,6 +27,8 @@ RESTRICT="mirror"
 RDEPEND="!bundled-jre? ( >=virtual/jre-1.8 )
 dev-libs/libdbusmenu"
 
+BDEPEND="dev-util/patchelf"
+
 S="${WORKDIR}/${JB_EXTRACTED}"
 
 # Major Package Name for combined packages like idea-community and idea-ultimate
@@ -78,6 +80,12 @@ jetbrains_src_prepare() {
 	default
 
 	use_rm !bundled-jre jbr
+
+	# patch java files
+	if use bundled-jre; then
+		patchelf --set-rpath '$ORIGIN' jbr/lib/jcef_helper || die
+		patchelf --set-rpath '$ORIGIN' jbr/lib/libjcef.so || die
+	fi
 
 	# prevent soname error of wrong architecture
 	rm -r --interactive=never lib/pty4j-native/linux/aarch64 || die
