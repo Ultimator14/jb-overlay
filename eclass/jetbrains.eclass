@@ -89,6 +89,7 @@ jetbrains_src_prepare() {
 
 	# prevent soname error of wrong architecture
 	rm -r --interactive=never lib/pty4j-native/linux/aarch64 || die
+	rm -r --interactive=never lib/pty4j-native/linux/arm || die
 	rm -r --interactive=never lib/pty4j-native/linux/mips64el || die
 	rm -r --interactive=never lib/pty4j-native/linux/ppc64le || die
 }
@@ -99,7 +100,7 @@ jetbrains_src_prepare() {
 jetbrains_src_install() {
 	insinto "/opt/${PN}"
 	doins -r .
-	fperms 755 /opt/${PN}/bin/{${JB_MAJOR_PN}.sh,fsnotifier{,64}} || die
+	fperms 755 /opt/${PN}/bin/{${JB_MAJOR_PN}.sh,fsnotifier} || die
 
 	use_mkexec bundled-jre jbr/bin/{jaotc,java,javac,jcmd,jdb,jfr,jhsdb,jinfo,jjs,jmap,jps,jrunscript,jstack,jstat,keytool,pack200,rmid,rmiregistry,serialver,unpack200}
 
