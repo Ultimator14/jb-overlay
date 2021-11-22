@@ -1,4 +1,0 @@
-# reactivate entries disabled by selinux
--x11-themes/zukitwo-shell
--gnome-extra/pch-session
--sys-apps/dbus-broker
