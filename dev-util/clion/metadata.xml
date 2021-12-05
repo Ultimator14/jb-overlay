@@ -11,5 +11,6 @@
 		<flag name="bundled-cmake">Uses bundled cmake</flag>
 		<flag name="bundled-gdb">Uses bundled gdb</flag>
 		<flag name="bundled-lldb">Uses bundled lldb</flag>
+		<flag name="bundled-ninja">Uses bundled ninja</flag>
 	</use>
 </pkgmetadata>
