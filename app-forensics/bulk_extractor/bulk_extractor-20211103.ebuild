@@ -4,7 +4,7 @@
 EAPI=6
 
 EGIT_REPO_URI="https://github.com/simsong/bulk_extractor.git"
-EGIT_COMMIT="b287b06da0bc069681d988bf1a40e9b69437ddcf"
+EGIT_COMMIT="1e211e01fb65479434b78211dc3a816ffe79fdd4"
 inherit git-r3
 
 DESCRIPTION="Scans a disk image, directory or file and extracts useful information"
