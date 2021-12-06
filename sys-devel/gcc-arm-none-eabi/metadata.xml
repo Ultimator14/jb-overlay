@@ -5,4 +5,7 @@
 		<email>jan.breig@freenet.de</email>
 		<name>Jan Breig</name>
 	</maintainer>
+	<use>
+		<flag name="python2">Support bundled python2 script</flag>
+	</use>
 </pkgmetadata>
