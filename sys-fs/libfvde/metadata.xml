@@ -5,4 +5,9 @@
 		<email>jan.breig@freenet.de</email>
 		<name>Jan Breig</name>
 	</maintainer>
+	<use>
+		<flag name="compression">Enable compression via zlib</flag>
+		<flag name="openssl">Enable dev-libs/openssl crypto backend</flag>
+		<flag name="python">Enable python bindings</flag>
+	</use>
 </pkgmetadata>

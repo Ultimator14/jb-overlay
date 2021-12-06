@@ -12,11 +12,14 @@ SRC_URI="https://github.com/libyal/${PN}/releases/download/${PV}/${PN}-experimen
 LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="static-libs python"
+RESTRICT="mirror"
+IUSE="+compression +openssl python static-libs"
 
 DEPEND="dev-util/byacc
 sys-devel/flex
-virtual/pkgconfig"
+virtual/pkgconfig
+compression? ( sys-libs/zlib )
+openssl? ( dev-libs/openssl )"
 RDEPEND=""
 BDEPEND=""
 
@@ -29,6 +32,8 @@ src_prepare() {
 src_configure() {
 	econf \
 		--prefix=/usr \
+		$(use_with !compression zlib no) \
+		$(use_with !openssl openssl no) \
 		$(use_enable static-libs shared no) \
 		$(use_enable python)
 }
