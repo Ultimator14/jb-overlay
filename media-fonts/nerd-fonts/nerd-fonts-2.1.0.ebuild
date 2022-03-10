@@ -118,12 +118,17 @@ SRC_URI="
 LICENSE="MIT
 	OFL-1.1
 	Apache-2.0
+	CC-BY-NC-ND-3.0
 	CC-BY-SA-4.0
-	BitstreamVera
-	BSD
-	WTFPL-2
-	Vic-Fieger-License
-	UbuntuFontLicense-1.0"
+	bitstreamverasansmono? ( BitstreamVera )
+	dejavusansmono? ( BitstreamVera )
+	go-mono? ( GO )
+	gohu? ( WTFPL-2 )
+	heavydata? ( Vic-Fieger-License )
+	monofur? ( monofur )
+	ubuntu? ( UbuntuFontLicense-1.0 )
+	ubuntumono? ( UbuntuFontLicense-1.0 )
+	"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
