@@ -174,6 +174,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	font_pkg_postinst
+
 	einfo "Installing font-patcher via an ebuild is hard, because paths are hardcoded differently"
 	einfo "in .sh files. You can still get it and use it by git cloning the nerd-font project and"
 	einfo "running it from the cloned directory."
