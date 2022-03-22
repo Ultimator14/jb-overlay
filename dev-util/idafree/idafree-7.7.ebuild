@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 
 RESTRICT="bindist mirror strip"
 
-RDEPEND="dev-qt/qtgui:5
+RDEPEND="dev-qt/qtgui:5[eglfs]
 		dev-qt/qtcore:5
 		dev-qt/qtprintsupport:5
 		dev-qt/qtwidgets:5
@@ -36,5 +36,5 @@ src_install() {
 
 	exeinto /opt/${MY_P}
 	doexe opt/${MY_P}/ida64
-	dosym /opt/${MY_P}/ida64 /usr/bin/ida64
+	dosym ${EPREFIX}/opt/${MY_P}/ida64 ${EPREFIX}/usr/bin/ida64
 }
