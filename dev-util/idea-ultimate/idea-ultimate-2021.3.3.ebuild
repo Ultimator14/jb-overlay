@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -7,7 +7,7 @@ JB_MAJOR_PN="idea"
 JB_PRETTY_PN="Intellij IDEA Ultimate"
 JB_HOMEPAGE="${JB_MAJOR_PN}"
 JB_SRC_URI="${JB_MAJOR_PN}/${JB_MAJOR_PN}IU-${PV}"
-JB_EXTRACTED="${JB_MAJOR_PN}-IU-213.5744.223"
+JB_EXTRACTED="${JB_MAJOR_PN}-IU-213.7172.25"
 
 inherit jetbrains
 
