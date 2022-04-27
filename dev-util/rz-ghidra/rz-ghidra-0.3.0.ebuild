@@ -54,5 +54,4 @@ src_configure() {
 
 src_install() {
 	cmake_src_install
-	dosym ../share/rizin/plugins/core_ghidra.so /usr/lib64/core_ghidra.so
 }
