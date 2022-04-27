@@ -39,10 +39,15 @@ src_prepare() {
 }
 
 src_configure() {
+	# Get current rizin version to install the plugin in the right dir
+	readarray -d'-' -t f <<<$(best_version dev-util/rizin)
+	local rizin_ver=$(tr -d '\n' <<< ${f[2]})
+
 	local mycmakeargs=(
 		-DBUILD_CUTTER_PLUGIN=$(usex cutter)
 		-DUSE_SYSTEM_PUGIXML=ON
 		-DCMAKE_INSTALL_PREFIX="${EPREFIX}/usr"
+		-DRIZIN_INSTALL_PLUGDIR="lib64/rizin/${rizin_ver}"
 	)
 	cmake_src_configure
 }
