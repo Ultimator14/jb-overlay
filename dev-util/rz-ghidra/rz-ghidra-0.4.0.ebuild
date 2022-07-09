@@ -10,7 +10,7 @@ inherit cmake
 DESCRIPTION="Deep ghidra decompiler and sleigh disassembler integration for rizin"
 HOMEPAGE="https://github.com/rizinorg/rz-ghidra"
 
-SRC_URI="https://github.com/rizinorg/rz-ghidra/releases/download/v0.3.0/rz-ghidra-src-v0.3.0.tar.xz -> ${PN}.tar.gz"
+SRC_URI="https://github.com/rizinorg/${PN}/releases/download/v${PV}/${PN}-src-v${PV}.tar.gz -> ${PN}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -47,7 +47,8 @@ src_configure() {
 		-DBUILD_CUTTER_PLUGIN=$(usex cutter)
 		-DUSE_SYSTEM_PUGIXML=ON
 		-DCMAKE_INSTALL_PREFIX="${EPREFIX}/usr"
-		-DRIZIN_INSTALL_PLUGDIR="lib64/rizin/${rizin_ver}"
+		-DRIZIN_INSTALL_PLUGDIR="lib64/rizin/plugins"
+		-DCUTTER_INSTALL_PLUGDIR="share/rizin/cutter/plugins/native"
 	)
 	cmake_src_configure
 }
