@@ -17,12 +17,17 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="dark light"
+IUSE="+dark light light-darkpanel"
+REQUIRED_USE="|| ( dark light light-darkpanel )"
 RESTRICT="strip"
 
 src_install() {
-	THEMES="$(echo Flat-Remix-{Blue,Green,Red,Yellow})"
-	use dark && THEMES+=" $(echo Flat-Remix-{Blue,Green,Red,Yellow}-Dark)"
-	use light && THEMES+=" $(echo Flat-Remix-{Blue,Green,Red,Yellow}-Light)"
-	THEMES="${THEMES}" default
+	COLORS="{Black,Blue,Brown,Cyan,Green,Grey,Magenta,Orange,Red,Teal,Violet,Yellow}"
+
+	THEMES=""
+	use dark && THEMES+=" $(echo Flat-Remix-${COLORS}-Dark)"
+	use light && THEMES+=" $(echo Flat-Remix-${COLORS}-Light)"
+	use light-darkpanel && THEMES+=" $(echo Flat-Remix-${COLORS}-Light-darkPanel)"
+
+	THEMES="$(eval echo ${THEMES})" default
 }
