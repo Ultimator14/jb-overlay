@@ -6,7 +6,7 @@ EAPI=7
 JB_PRETTY_PN="PhpStorm"
 JB_HOMEPAGE="${PN}"
 JB_SRC_URI="webide/PhpStorm-${PV}"
-JB_EXTRACTED="PhpStorm-221.5591.58"
+JB_EXTRACTED="PhpStorm-222.4345.15"
 
 inherit jetbrains
 
