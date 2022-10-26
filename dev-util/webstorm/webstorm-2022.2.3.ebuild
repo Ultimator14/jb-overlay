@@ -6,7 +6,7 @@ EAPI=7
 JB_PRETTY_PN="WebStorm"
 JB_HOMEPAGE="${PN}"
 JB_SRC_URI="${PN}/WebStorm-${PV}"
-JB_EXTRACTED="WebStorm-221.5591.52"
+JB_EXTRACTED="WebStorm-222.4345.14"
 
 inherit jetbrains
 
