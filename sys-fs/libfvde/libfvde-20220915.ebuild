@@ -20,7 +20,7 @@ sys-devel/flex
 virtual/pkgconfig
 compression? ( sys-libs/zlib )
 openssl? ( dev-libs/openssl )"
-RDEPEND=""
+RDEPEND="sys-fs/fuse"
 BDEPEND=""
 
 src_prepare() {
