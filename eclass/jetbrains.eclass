@@ -102,7 +102,7 @@ jetbrains_src_install() {
 	doins -r .
 	fperms 755 /opt/${PN}/bin/{${JB_MAJOR_PN}.sh,fsnotifier} || die
 
-	use_mkexec bundled-jre jbr/bin/{jaotc,java,javac,jcmd,jdb,jfr,jhsdb,jinfo,jjs,jmap,jps,jrunscript,jstack,jstat,keytool,pack200,rmid,rmiregistry,serialver,unpack200}
+	use_mkexec bundled-jre jbr/bin/{java,javac,javadoc,jcmd,jdb,jfr,jhsdb,jinfo,jmap,jps,jrunscript,jstack,jstat,keytool,rmiregistry,serialver}
 
 	make_wrapper "${PN}" "/opt/${PN}/bin/${JB_MAJOR_PN}.sh"
 	newicon "bin/${JB_MAJOR_PN}.svg" "${PN}.svg"
