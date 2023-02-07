@@ -21,7 +21,7 @@ SRC_URI="https://download.jetbrains.com/${JB_SRC_URI}.tar.gz"
 
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="bundled-jre"
+IUSE="+bundled-jre"
 RESTRICT="mirror"
 
 RDEPEND="!bundled-jre? ( >=virtual/jre-1.8 )
