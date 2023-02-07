@@ -86,12 +86,6 @@ jetbrains_src_prepare() {
 		patchelf --set-rpath '$ORIGIN' jbr/lib/jcef_helper || die
 		patchelf --set-rpath '$ORIGIN' jbr/lib/libjcef.so || die
 	fi
-
-	# prevent soname error of wrong architecture
-	rm -r --interactive=never lib/pty4j-native/linux/aarch64 || die
-	rm -r --interactive=never lib/pty4j-native/linux/arm || die
-	rm -r --interactive=never lib/pty4j-native/linux/mips64el || die
-	rm -r --interactive=never lib/pty4j-native/linux/ppc64le || die
 }
 
 # @FUNCTION: jetbrains_src_install
