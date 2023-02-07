@@ -100,9 +100,10 @@ jetbrains_src_prepare() {
 jetbrains_src_install() {
 	insinto "/opt/${PN}"
 	doins -r .
-	fperms 755 /opt/${PN}/bin/{${JB_MAJOR_PN}.sh,fsnotifier} || die
+	fperms 755 /opt/${PN}/bin/{${JB_MAJOR_PN}.sh,format.sh,fsnotifier,inspect.sh,ltedit.sh,restart.py,remote-dev-server.sh,repair,restart.py} || die
 
 	use_mkexec bundled-jre jbr/bin/{java,javac,javadoc,jcmd,jdb,jfr,jhsdb,jinfo,jmap,jps,jrunscript,jstack,jstat,keytool,rmiregistry,serialver}
+	use_mkexec bundled-jre jbr/lib/{chrome-sandbox,jcef_helper,jexec,jspawnhelper}
 
 	make_wrapper "${PN}" "/opt/${PN}/bin/${JB_MAJOR_PN}.sh"
 	newicon "bin/${JB_MAJOR_PN}.svg" "${PN}.svg"
