@@ -34,9 +34,9 @@ src_prepare() {
 src_install() {
 	jetbrains_src_install
 
-	use_mkexec bundled-clang bin/clang/linux/{clangd,clang-tidy,clazy-standalone,libclazyPlugin.so,libclazyPlugin.so.15git,llvm-symbolizer}
-	use_mkexec bundled-cmake bin/cmake/linux/bin/{ccmake,cmake,cpack,ctest}
-	use_mkexec bundled-gdb bin/gdb/linux/bin/{gcore,gdb,gdb-add-index,gdbserver}
-	use_mkexec bundled-lldb bin/lldb/linux/bin/{lldb,lldb-argdumper,LLDBFrontend,lldb-server}
-	use_mkexec bundled-ninja bin/ninja/linux/ninja
+	use_mkexec bundled-clang bin/clang/linux/x64/{clang-tidy,clangd,clazy-standalone,libclazyPlugin.so,libclazyPlugin.so.16git,llvm-symbolizer}
+	use_mkexec bundled-cmake bin/cmake/linux/x64/bin/{cmake,cpack,ctest}
+	use_mkexec bundled-gdb bin/gdb/linux/x64/bin/{gcore,gdb,gdb-add-index,gdbserver}
+	use_mkexec bundled-lldb bin/lldb/linux/x64/bin/{lldb,lldb-argdumper,lldb-server,LLDBFrontend}
+	use_mkexec bundled-ninja bin/ninja/linux/x64/ninja
 }
