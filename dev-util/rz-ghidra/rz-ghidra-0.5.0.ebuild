@@ -5,12 +5,14 @@ EAPI=8
 
 S="${WORKDIR}/${PN}"
 
+# force the use of make
+CMAKE_MAKEFILE_GENERATOR=emake
 inherit cmake
 
 DESCRIPTION="Deep ghidra decompiler and sleigh disassembler integration for rizin"
 HOMEPAGE="https://github.com/rizinorg/rz-ghidra"
 
-SRC_URI="https://github.com/rizinorg/${PN}/releases/download/v${PV}/${PN}-src-v${PV}.tar.gz -> ${PN}.tar.gz"
+SRC_URI="https://github.com/rizinorg/${PN}/releases/download/v${PV}/${PN}-src-v${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -19,7 +21,7 @@ IUSE="cutter"
 
 DEPEND="
 	dev-libs/pugixml
-	dev-util/rizin:=
+	=dev-util/rizin-0.5*:=
 	cutter? (
 		dev-qt/qtwidgets:5
 		dev-util/cutter
@@ -29,7 +31,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 PATCHES=(
-	"${FILESDIR}/${P}-fix-crc32-include-guard.patch"
+	"${FILESDIR}/${PN}-0.4.0-fix-crc32-include-guard.patch"
 )
 
 RESTRICT="mirror"
