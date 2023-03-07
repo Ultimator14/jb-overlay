@@ -3,7 +3,7 @@
 
 # @ECLASS: jetbrains.eclass
 # @MAINTAINER:
-# jan.breig@freenet.de
+# git@pygos.space
 # @BLURB: Eclass that bundles jetbrains applications
 
 case "${EAPI:-0}" in

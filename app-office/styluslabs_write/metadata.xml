@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>jan.breig@freenet.de</email>
+		<email>git@pygos.space</email>
 		<name>Jan Breig</name>
 	</maintainer>
 </pkgmetadata>
