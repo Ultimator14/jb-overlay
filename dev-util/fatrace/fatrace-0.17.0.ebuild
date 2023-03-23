@@ -7,7 +7,7 @@ inherit linux-info
 
 DESCRIPTION="Report file access events from all running processes"
 HOMEPAGE="https://launchpad.net/fatrace"
-SRC_URI="https://github.com/martinpitt/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/martinpitt/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
