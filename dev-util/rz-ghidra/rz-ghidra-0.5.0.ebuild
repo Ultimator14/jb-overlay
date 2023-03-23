@@ -12,7 +12,7 @@ inherit cmake
 DESCRIPTION="Deep ghidra decompiler and sleigh disassembler integration for rizin"
 HOMEPAGE="https://github.com/rizinorg/rz-ghidra"
 
-SRC_URI="https://github.com/rizinorg/${PN}/releases/download/v${PV}/${PN}-src-v${PV}.tar.gz"
+SRC_URI="https://github.com/rizinorg/${PN}/releases/download/v${PV}/${PN}-src-v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
