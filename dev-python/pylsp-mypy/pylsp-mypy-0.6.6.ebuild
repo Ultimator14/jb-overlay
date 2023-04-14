@@ -27,3 +27,5 @@ RDEPEND="
 	dev-python/mypy[${PYTHON_USEDEP}]
 	>=dev-python/tomli-1.1.0[${PYTHON_USEDEP}]
 "
+
+distutils_enable_tests pytest
