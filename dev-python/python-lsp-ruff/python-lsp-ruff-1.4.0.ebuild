@@ -29,3 +29,5 @@ RDEPEND="
 	>=dev-python/tomli-1.1.0[${PYTHON_USEDEP}]
 	dev-python/cattrs[${PYTHON_USEDEP}]
 "
+
+distutils_enable_tests pytest
