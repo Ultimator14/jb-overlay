@@ -1,0 +1,43 @@
+Bugblat Software License
+------------------------
+
+Please read this document carefully before using the software.  By using the software, you are agreeing to be bound by the terms of this license. If you do not agree to the terms of this license, promptly return the software to the place where you obtained it and your money will be refunded.
+
+This software ("the Software") is supplied to support the evaluation and operation of Bugblat Test Equipment ("the Hardware").  The combination of the Software and the Hardware is referred to as the "Product".
+
+Permission is granted to anyone to use the Software for evaluation and operation of the Hardware on any computer, subject to the following conditions and restrictions:
+
+1. You may not modify, translate, reverse engineer, decompile, disassemble (except to the extent applicable laws specifically prohibit such restriction), or create derivative works based on the Software, or remove any proprietary notices or labels on the Software.
+
+2. Title, ownership rights, and intellectual property rights in and to the Software shall remain with Bugblat. The Software is protected by copyright laws and international copyright treaties.
+
+-----------------------------------------------------------------------
+Limitation Of Liability
+
+No oral or written information or advice given by Bugblat or its representative creates a warranty or increases the scope of a warranty.
+
+The Software is provided 'AS IS', without any express or implied warranty.  In no event will Bugblat be held liable for any damages arising from the use of this software.
+
+To the maximum extent permitted by applicable law, Bugblat and its suppliers disclaim all other warranties and conditions, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement, with regard to the software, and the provision of or failure to provide support services. This limited warranty gives you specific legal rights. You may have other rights, which vary from jurisdiction to jurisdiction.
+
+To the maximum extent permitted by applicable law, in no event shall Bugblat or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use the software product or the provision of or failure to provide support services, even if Bugblat has been advised of the possibility of such damages.
+
+In any case, Bugblat's entire liability under any provision of this license agreement shall be limited to the greater of the amount actually paid by you for Product or US $50.
+
+Because some jurisdictions do not allow the exclusion or limitation of liability, the above limitation may not apply to you.
+
+
+-----------------------------------------------------------------------
+High Risk Activities
+
+The Hardware and the Software are not fault-tolerant and are not designed, manufactured or intended for use or resale in or with control equipment in hazardous environments requiring fail-safe performance, such as in the operation of nuclear facilities, aircraft navigation or communication systems, air traffic control, direct life support machines, or weapons systems, in which the failure of the Hardware or Software could lead directly to death, personal injury, or severe physical or environmental damage ("High Risk Activities").
+
+Bugblat and its suppliers specifically disclaim any express or implied warranty of fitness for High Risk Activities.
+
+-----------------------------------------------------------------------
+Governing Law.
+
+This License is governed by the laws of England,
+
+-----------------------------------------------------------------------
+Copyright (C) 2001-2018 Bugblat Ltd
