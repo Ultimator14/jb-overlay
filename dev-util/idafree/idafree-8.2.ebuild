@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit desktop eutils
+inherit desktop
 
 MY_PV=$(ver_rs 1 '')
 MY_P=${PN}${MY_PV}

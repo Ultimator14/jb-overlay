@@ -14,7 +14,7 @@ case "${EAPI:-0}" in
         ;;
 esac
 
-inherit desktop eutils
+inherit desktop wrapper
 
 HOMEPAGE="https://www.jetbrains.com/${JB_HOMEPAGE}"
 SRC_URI="https://download.jetbrains.com/${JB_SRC_URI}.tar.gz"
