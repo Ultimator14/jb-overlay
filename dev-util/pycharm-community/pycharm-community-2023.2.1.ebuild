@@ -21,5 +21,4 @@ src_prepare() {
 	jetbrains_src_prepare
 
 	rm --interactive=never plugins/python-ce/helpers/pydev/pydevd_attach_to_process/attach_linux_aarch64.so || die
-	rm --interactive=never plugins/cwm-plugin/quiche-native/linux-aarch64/libquiche.so || die
 }

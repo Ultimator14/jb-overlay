@@ -79,6 +79,8 @@ EXPORT_FUNCTIONS src_prepare src_install
 jetbrains_src_prepare() {
 	default
 
+	rm --interactive=never plugins/cwm-plugin/quiche-native/linux-aarch64/libquiche.so || die
+
 	use_rm !bundled-jre jbr
 
 	# patch java files

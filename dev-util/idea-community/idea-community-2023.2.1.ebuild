@@ -16,10 +16,3 @@ DESCRIPTION="Capable and Ergonomic IDE for JVM"
 LICENSE="Apache-2.0"
 
 RDEPEND="virtual/jdk"
-
-src_prepare() {
-	jetbrains_src_prepare
-
-	rm --interactive=never plugins/cwm-plugin/quiche-native/linux-aarch64/libquiche.so || die
-
-}

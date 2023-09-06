@@ -19,7 +19,6 @@ RDEPEND="dev-lang/go"
 src_prepare() {
 	jetbrains_src_prepare
 
-	rm --interactive=never plugins/cwm-plugin/quiche-native/linux-aarch64/libquiche.so || die
 	rm --interactive=never plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-arm64 || die
 	rm --interactive=never plugins/go-plugin/lib/dlv/linuxarm/dlv || die
 
