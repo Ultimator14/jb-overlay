@@ -15,3 +15,11 @@ DESCRIPTION="The Most Intelligent Ruby and Rails IDE"
 LICENSE="jetbrains-business jetbrains-personal"
 
 RDEPEND=""
+
+src_prepare() {
+	jetbrains_src_prepare
+
+	rm --interactive=never plugins/cwm-plugin/quiche-native/linux-aarch64/libquiche.so || die
+	rm --interactive=never plugins/gateway-plugin/lib/remote-dev-workers/remote-dev-worker-linux-arm64 || die
+	rm --interactive=never plugins/tailwindcss/server/node.napi.musl-IAP67VWK.node || die
+}
