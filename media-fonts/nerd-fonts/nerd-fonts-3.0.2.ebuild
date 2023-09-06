@@ -19,10 +19,12 @@ FONTS=(
 	BitstreamVeraSansMono
 	CascadiaCode
 	CodeNewRoman
+	ComicShannsMono
 	Cousine
 	DaddyTimeMono
 	DejaVuSansMono
 	DroidSansMono
+	EnvyCodeR
 	FantasqueSansMono
 	FiraCode
 	FiraMono
@@ -37,7 +39,9 @@ FONTS=(
 	Inconsolata
 	InconsolataGo
 	InconsolataLGC
+	IntelOneMono
 	Iosevka
+	IosevkaTerm
 	JetBrainsMono
 	Lekton
 	LiberationMono
@@ -74,10 +78,12 @@ SRC_URI="
 	bitstreamverasansmono?  ( "${COMMON_URI}/BitstreamVeraSansMono.zip" )
 	cascadiacode?           ( "${COMMON_URI}/CascadiaCode.zip" )
 	codenewroman?           ( "${COMMON_URI}/CodeNewRoman.zip" )
+	comicshannsmono?        ( "${COMMON_URI}/ComicShannsMono.zip" )
 	cousine?                ( "${COMMON_URI}/Cousine.zip" )
 	daddytimemono?          ( "${COMMON_URI}/DaddyTimeMono.zip" )
 	dejavusansmono?         ( "${COMMON_URI}/DejaVuSansMono.zip" )
 	droidsansmono?          ( "${COMMON_URI}/DroidSansMono.zip" )
+	envycoder?              ( "${COMMON_URI}/EnvyCodeR.zip" )
 	fantasquesansmono?      ( "${COMMON_URI}/FantasqueSansMono.zip" )
 	firacode?               ( "${COMMON_URI}/FiraCode.zip" )
 	firamono?               ( "${COMMON_URI}/FiraMono.zip" )
@@ -92,7 +98,9 @@ SRC_URI="
 	inconsolata?            ( "${COMMON_URI}/Inconsolata.zip" )
 	inconsolatago?          ( "${COMMON_URI}/InconsolataGo.zip" )
 	inconsolatalgc?         ( "${COMMON_URI}/InconsolataLGC.zip" )
+	intelonemono?           ( "${COMMON_URI}/IntelOneMono.zip" )
 	iosevka?                ( "${COMMON_URI}/Iosevka.zip" )
+	iosevkaterm?            ( "${COMMON_URI}/IosevkaTerm.zip" )
 	jetbrainsmono?          ( "${COMMON_URI}/JetBrainsMono.zip" )
 	lekton?                 ( "${COMMON_URI}/Lekton.zip" )
 	liberationmono?         ( "${COMMON_URI}/LiberationMono.zip" )
@@ -132,7 +140,7 @@ LICENSE="MIT
 	monofur? ( monofur )
 	ubuntu? ( UbuntuFontLicense-1.0 )
 	ubuntumono? ( UbuntuFontLicense-1.0 )
-	"
+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
