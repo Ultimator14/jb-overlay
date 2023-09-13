@@ -34,14 +34,11 @@ CRATES="
 	crossterm@0.23.2
 	crossterm_winapi@0.9.0
 	doc-comment@0.3.3
-	equivalent@1.0.1
 	errno@0.3.1
 	errno-dragonfly@0.1.2
 	file-size@1.0.3
-	hashbrown@0.14.0
 	heck@0.4.0
 	hermit-abi@0.3.2
-	indexmap@2.0.0
 	is-terminal@0.4.9
 	itoa@1.0.4
 	lazy-regex@2.3.1
@@ -75,7 +72,6 @@ CRATES="
 	serde@1.0.150
 	serde_derive@1.0.150
 	serde_json@1.0.89
-	serde_spanned@0.6.3
 	signal-hook@0.3.14
 	signal-hook-mio@0.2.3
 	signal-hook-registry@1.4.0
@@ -89,9 +85,6 @@ CRATES="
 	terminal-light@1.1.1
 	thiserror@1.0.37
 	thiserror-impl@1.0.37
-	toml@0.7.6
-	toml_datetime@0.6.3
-	toml_edit@0.19.14
 	unicode-ident@1.0.5
 	unicode-width@0.1.10
 	utf8parse@0.2.1
@@ -116,7 +109,6 @@ CRATES="
 	windows_x86_64_gnullvm@0.48.0
 	windows_x86_64_msvc@0.42.0
 	windows_x86_64_msvc@0.48.0
-	winnow@0.5.14
 	xterm-query@0.2.0
 "
 
