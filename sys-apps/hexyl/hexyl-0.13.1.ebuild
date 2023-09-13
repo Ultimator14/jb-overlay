@@ -97,7 +97,3 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 QA_FLAGS_IGNORED="usr/bin/${PN}"
-
-src_install() {
-	cargo_src_install
-}
