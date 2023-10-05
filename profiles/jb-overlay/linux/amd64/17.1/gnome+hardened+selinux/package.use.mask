@@ -1,3 +1,0 @@
-# reactivate gnome entries deactivated by selinux
-gnome-base/gdm -wayland
->=x11-wm/mutter-3.22 -wayland
