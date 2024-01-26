@@ -17,7 +17,7 @@ IUSE="+bundled-clang +bundled-cmake +bundled-gdb +bundled-lldb +bundled-ninja"
 
 RDEPEND="!bundled-clang? ( sys-devel/clang )
 !bundled-cmake? ( dev-util/cmake )
-!bundled-gdb? ( sys-devel/gdb )
+!bundled-gdb? ( dev-debug/gdb )
 !bundled-lldb? ( dev-util/lldb )
 !bundled-ninja? ( dev-util/ninja )"
 
