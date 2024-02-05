@@ -10,6 +10,7 @@ HOMEPAGE="https://github.com/ryanoasis/nerd-fonts"
 COMMON_URI="https://github.com/ryanoasis/${PN}/releases/download/v${PV}"
 
 FONTS=(
+	0xProto
 	3270
 	Agave
 	AnonymousPro
@@ -18,9 +19,12 @@ FONTS=(
 	BigBlueTerminal
 	BitstreamVeraSansMono
 	CascadiaCode
+	CascadiaMono
 	CodeNewRoman
 	ComicShannsMono
+	CommitMono
 	Cousine
+	D2Coding
 	DaddyTimeMono
 	DejaVuSansMono
 	DroidSansMono
@@ -28,6 +32,7 @@ FONTS=(
 	FantasqueSansMono
 	FiraCode
 	FiraMono
+	GeistMono
 	Go-Mono
 	Gohu
 	Hack
@@ -42,11 +47,14 @@ FONTS=(
 	IntelOneMono
 	Iosevka
 	IosevkaTerm
+	IosevkaTermSlab
 	JetBrainsMono
 	Lekton
 	LiberationMono
 	Lilex
+	MartianMono
 	Meslo
+	Monaspace
 	Monofur
 	Monoid
 	Mononoki
@@ -69,6 +77,7 @@ FONTS=(
 )
 
 SRC_URI="
+	0xproto?                ( "${COMMON_URI}/0xProto.zip" )
 	3270?                   ( "${COMMON_URI}/3270.zip" )
 	agave?                  ( "${COMMON_URI}/Agave.zip" )
 	anonymouspro?           ( "${COMMON_URI}/AnonymousPro.zip" )
@@ -77,9 +86,12 @@ SRC_URI="
 	bigblueterminal?        ( "${COMMON_URI}/BigBlueTerminal.zip" )
 	bitstreamverasansmono?  ( "${COMMON_URI}/BitstreamVeraSansMono.zip" )
 	cascadiacode?           ( "${COMMON_URI}/CascadiaCode.zip" )
+	cascadiamono?           ( "${COMMON_URI}/CascadiaMono.zip" )
 	codenewroman?           ( "${COMMON_URI}/CodeNewRoman.zip" )
 	comicshannsmono?        ( "${COMMON_URI}/ComicShannsMono.zip" )
+	commitmono?             ( "${COMMON_URI}/CommitMono.zip" )
 	cousine?                ( "${COMMON_URI}/Cousine.zip" )
+	d2coding?               ( "${COMMON_URI}/D2Coding.zip" )
 	daddytimemono?          ( "${COMMON_URI}/DaddyTimeMono.zip" )
 	dejavusansmono?         ( "${COMMON_URI}/DejaVuSansMono.zip" )
 	droidsansmono?          ( "${COMMON_URI}/DroidSansMono.zip" )
@@ -87,6 +99,7 @@ SRC_URI="
 	fantasquesansmono?      ( "${COMMON_URI}/FantasqueSansMono.zip" )
 	firacode?               ( "${COMMON_URI}/FiraCode.zip" )
 	firamono?               ( "${COMMON_URI}/FiraMono.zip" )
+	geistmono?              ( "${COMMON_URI}/GeistMono.zip" )
 	go-mono?                ( "${COMMON_URI}/Go-Mono.zip" )
 	gohu?                   ( "${COMMON_URI}/Gohu.zip" )
 	hack?                   ( "${COMMON_URI}/Hack.zip" )
@@ -101,11 +114,14 @@ SRC_URI="
 	intelonemono?           ( "${COMMON_URI}/IntelOneMono.zip" )
 	iosevka?                ( "${COMMON_URI}/Iosevka.zip" )
 	iosevkaterm?            ( "${COMMON_URI}/IosevkaTerm.zip" )
+	iosevkatermslab?        ( "${COMMON_URI}/IosevkaTermSlab.zip" )
 	jetbrainsmono?          ( "${COMMON_URI}/JetBrainsMono.zip" )
 	lekton?                 ( "${COMMON_URI}/Lekton.zip" )
 	liberationmono?         ( "${COMMON_URI}/LiberationMono.zip" )
 	lilex?                  ( "${COMMON_URI}/Lilex.zip" )
+	martianmono?            ( "${COMMON_URI}/MartianMono.zip" )
 	meslo?                  ( "${COMMON_URI}/Meslo.zip" )
+	monaspace?              ( "${COMMON_URI}/Monaspace.zip" )
 	monofur?                ( "${COMMON_URI}/Monofur.zip" )
 	monoid?                 ( "${COMMON_URI}/Monoid.zip" )
 	mononoki?               ( "${COMMON_URI}/Mononoki.zip" )
