@@ -1,1 +1,3 @@
 amd64 jb-overlay/linux/amd64/17.1/gnome+hardened+selinux dev
+amd64 jb-overlay/linux/amd64/23.0/gnome+hardened+selinux dev
+amd64 jb-overlay/linux/amd64/23.0/split-usr/gnome+hardened+selinux dev
