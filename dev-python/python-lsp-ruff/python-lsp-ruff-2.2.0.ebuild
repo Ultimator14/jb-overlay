@@ -24,7 +24,6 @@ KEYWORDS="amd64 x86"
 
 RDEPEND="
 	>=dev-util/ruff-0.2.0
-	<dev-util/ruff-0.4.0
 	dev-python/python-lsp-server[${PYTHON_USEDEP}]
 	>=dev-python/lsprotocol-2023.0.1[${PYTHON_USEDEP}]
 	>=dev-python/tomli-1.1.0[${PYTHON_USEDEP}]
