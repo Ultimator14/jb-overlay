@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=8
 
 EGIT_REPO_URI="https://github.com/CameronLonsdale/bmap.git"
 EGIT_COMMIT="375d50278fc244f5b3c9e8a7a75ef81a83f2c72c"
