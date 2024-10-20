@@ -87,7 +87,7 @@ SRC_URI="
 	${CARGO_CRATE_URIS}
 "
 
-LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions ISC MIT Unicode-DFS-2016 Unlicense ZLIB"
+LICENSE="Apache-2.0 ISC MIT Unicode-DFS-2016 ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
 
