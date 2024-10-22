@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -65,6 +65,7 @@ FONTS=(
 	Overpass
 	ProFont
 	ProggyClean
+	Recursive
 	RobotoMono
 	ShareTechMono
 	SourceCodePro
@@ -73,7 +74,9 @@ FONTS=(
 	Tinos
 	Ubuntu
 	UbuntuMono
+	UbuntuSans
 	VictorMono
+	ZedMono
 )
 
 SRC_URI="
@@ -132,6 +135,7 @@ SRC_URI="
 	overpass?               ( "${COMMON_URI}/Overpass.zip" )
 	profont?                ( "${COMMON_URI}/ProFont.zip" )
 	proggyclean?            ( "${COMMON_URI}/ProggyClean.zip" )
+	recursive?              ( "${COMMON_URI}/Recursive.zip" )
 	robotomono?             ( "${COMMON_URI}/RobotoMono.zip" )
 	sharetechmono?          ( "${COMMON_URI}/ShareTechMono.zip" )
 	sourcecodepro?          ( "${COMMON_URI}/SourceCodePro.zip" )
@@ -140,7 +144,9 @@ SRC_URI="
 	tinos?                  ( "${COMMON_URI}/Tinos.zip" )
 	ubuntu?                 ( "${COMMON_URI}/Ubuntu.zip" )
 	ubuntumono?             ( "${COMMON_URI}/UbuntuMono.zip" )
+	ubuntusans?             ( "${COMMON_URI}/UbuntuSans.zip" )
 	victormono?             ( "${COMMON_URI}/VictorMono.zip" )
+	zedmono?                ( "${COMMON_URI}/ZedMono.zip" )
 "
 
 LICENSE="MIT
@@ -156,6 +162,7 @@ LICENSE="MIT
 	monofur? ( monofur )
 	ubuntu? ( UbuntuFontLicense-1.0 )
 	ubuntumono? ( UbuntuFontLicense-1.0 )
+	ubuntusans? ( UbuntuFontLicense-1.0 )
 "
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
