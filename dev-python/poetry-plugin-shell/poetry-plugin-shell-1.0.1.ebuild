@@ -25,7 +25,7 @@ KEYWORDS="~amd64"
 RDEPEND="
 	>=dev-python/poetry-2.0.0[${PYTHON_USEDEP}]
 	>=dev-python/pexpect-4.7.0[${PYTHON_USEDEP}]
-	>=dev-python/shellingham-1.50[${PYTHON_USEDEP}]
+	>=dev-python/shellingham-1.5.0[${PYTHON_USEDEP}]
 "
 
 distutils_enable_tests pytest
