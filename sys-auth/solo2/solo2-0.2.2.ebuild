@@ -259,7 +259,7 @@ CRATES="
 	zeroize@1.5.7
 "
 
-inherit cargo
+inherit cargo udev
 
 S="${WORKDIR}/${PN}-cli-${PV}"
 
