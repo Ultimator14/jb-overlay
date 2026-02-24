@@ -276,7 +276,7 @@ LICENSE+=" 0BSD Apache-2.0 BSD ISC MIT MPL-2.0 Unicode-DFS-2016"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="sys-apps/pcsc-lite"
+DEPEND="sys-apps/pcsc-lite app-crypt/ccid"
 RDEPEND="${DEPEND}"
 
 src_install() {
