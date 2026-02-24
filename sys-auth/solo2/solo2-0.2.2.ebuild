@@ -277,6 +277,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 DEPEND="sys-apps/pcsc-lite"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	cargo_src_install
